@@ -1,0 +1,113 @@
+/* Enhanced and professional home.css */
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #f0f2f5;
+}
+
+.home-title {
+  font-size: 3rem;
+  color: #1a1a1a;
+  background: linear-gradient(145deg, #6a82fb, #fc5c7d);
+  padding: 20px 40px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+}
+
+.home-title:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.home-description {
+  font-size: 1.4rem;
+  color: #555;
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-description:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.home-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.home-section {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.home-section h2 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.home-section p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.home-link {
+  text-decoration: none;
+  color: #6a82fb;
+  transition: color 0.3s;
+}
+
+.home-link:hover,
+.home-link:focus {
+  color: #fc5c7d;
+}
+
+@media (max-width: 768px) {
+  .home-section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-section {
+    margin-bottom: 20px;
+  }
+}

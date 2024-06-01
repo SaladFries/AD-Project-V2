@@ -1,0 +1,138 @@
+/* supplier.css */
+.supplier-details-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.suppliers-list,
+.details-section {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.suppliers-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.suppliers-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+}
+
+.suppliers-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.suppliers-list li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.suppliers-list .add-supplier {
+  color: blue;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+/* Search Box */
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Details Section */
+.details-section h2 {
+  margin-bottom: 20px;
+}
+
+.details-section p {
+  margin: 10px 0;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.save-button,
+.edit-details,
+.delete-button,
+.cancel-button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.save-button {
+  background-color: green;
+}
+
+.edit-details {
+  background-color: orange;
+}
+
+.delete-button {
+  background-color: red;
+}
+
+.cancel-button {
+  background-color: gray;
+}
+
+.save-button:hover {
+  background-color: darkgreen;
+}
+
+.edit-details:hover {
+  background-color: darkorange;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+.cancel-button:hover {
+  background-color: darkgray;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .supplier-details-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .suppliers-list,
+  .details-section {
+    min-width: auto;
+  }
+}

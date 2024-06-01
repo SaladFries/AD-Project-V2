@@ -1,0 +1,64 @@
+Marvin Glenn Canay (SaladFries)
+Can you make a Javascript code where you put an array of objects into a drop-down menu?
+ChatGPT
+
+Sure, I can help you with that. Here is an example of a JavaScript code that creates a drop-down menu from an array of objects:
+javascript
+
+// Array of objects
+const data = [
+    { id: 1, name: 'Option 1' },
+    { id: 2, name: 'Option 2' },
+    { id: 3, name: 'Option 3' }
+];
+
+// Get the select element from the HTML
+const selectElement = document.getElementById('mySelect');
+
+// Loop through the array and add options to the select element
+data.forEach(item => {
+    const option = document.createElement('option');
+    option.value = item.id;
+    option.text = item.name;
+    selectElement.appendChild(option);
+});
+
+You can add this code to your HTML file within a script tag or in an external JavaScript file linked to your HTML document. Make sure to have a select element with the id 'mySelect' in your HTML where you want the drop-down menu to be displayed.
+Marvin Glenn Canay (SaladFries)
+Can you make a Javascript code getting a table data from a localhost database using promise?
+ChatGPT
+
+Sure, I can provide you with an example code snippet that fetches data from a localhost database using JavaScript promises. Here's an example code using the Fetch API:
+javascript
+
+// Function to fetch data from the localhost database
+function fetchDataFromDatabase() {
+    return new Promise((resolve, reject) => {
+        fetch('http://localhost:3000/data') // Replace the URL with your localhost database endpoint
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                return response.json();
+            })
+            .then(data => {
+                resolve(data);
+            })
+            .catch(error => {
+                reject(error);
+            });
+    });
+}
+
+// Call the function to fetch data
+fetchDataFromDatabase()
+    .then(data => {
+        console.log(data); // Display the fetched data
+    })
+    .catch(error => {
+        console.log(error); // Display any errors encountered
+    });
+
+In this code snippet, the fetchDataFromDatabase function makes a GET request to the specified URL (replace it with your localhost database endpoint) to fetch the data. It returns a promise that resolves with the fetched data or rejects with an error message if the fetch operation fails.
+
+You can modify the URL and database endpoint according to your setup. Do make sure that your database server is running and accessible from your localhost.
